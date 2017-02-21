@@ -1,10 +1,11 @@
 import React from 'React';
-
+import "./header.css";
 
 class Header extends React.Component{
 		render(){
 
 			return(
+				<div>
 				<div className="header">
 					<div className="navpart1">
 						<ul>
@@ -18,8 +19,8 @@ class Header extends React.Component{
 							</li>
 						</ul>
 					</div>
-					<div className="logo"><img src="#"/></div>
-					<div className="navPart2">
+					<div className="logo"><img src="./assets/OM.jpeg"/></div>
+					<div className="navpart2">
 						<ul>
 							<li>Tarifs</li>
 							<li>Notre équipe</li>
@@ -27,7 +28,7 @@ class Header extends React.Component{
 						</ul>
 					</div>
 				</div>
-				
+			</div>
 			
 			);
 		}

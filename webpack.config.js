@@ -17,8 +17,8 @@ var config = {
                 include: APP_DIR,
                 loader: 'babel'
             }, {
-                test: /\.scss$/,
-                loaders: ["style-loader", "css-loader", "sass-loader"]
+                test: /\.(css|scss)$/,
+                loader: 'style-loader!css-loader!sass-loader'
             }, {
                 test: /\.(jpg|png|otf)$/,
                 loader: 'file-loader'
