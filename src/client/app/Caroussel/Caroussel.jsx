@@ -36,7 +36,7 @@ class Caroussel extends React.Component{
 		this.setState({position:0})
 	}
 	else{
-		this.setState({position:++this.state.position})
+		this.setState({position:++this.state.position});
 	}
 }
 	prevSlide(){
@@ -44,7 +44,7 @@ class Caroussel extends React.Component{
 			this.setState({position:0})
 		}
 		else{
-		this.setState({position:--this.state.position})
+		this.setState({position:--this.state.position});
 	}
 }
 

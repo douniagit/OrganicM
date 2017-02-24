@@ -26233,7 +26233,7 @@
 	                    _React2.default.createElement(
 	                        'a',
 	                        { href: '#' },
-	                        _React2.default.createElement('img', { className: 'twit', src: 'logo/twit.png', alt: '' })
+	                        _React2.default.createElement('img', { className: 'twit', src: './assets/twit.png' })
 	                    )
 	                ),
 	                _React2.default.createElement(
@@ -26242,7 +26242,7 @@
 	                    _React2.default.createElement(
 	                        'a',
 	                        { href: '#' },
-	                        _React2.default.createElement('img', { className: 'facebook', src: 'logo/facebook.png', alt: '' })
+	                        _React2.default.createElement('img', { className: 'facebook', src: './assets/fb.png' })
 	                    )
 	                ),
 	                _React2.default.createElement(
@@ -26251,25 +26251,7 @@
 	                    _React2.default.createElement(
 	                        'a',
 	                        { href: '#' },
-	                        _React2.default.createElement('img', { className: 'instagram', src: 'logo/instagram.png', alt: '' })
-	                    )
-	                ),
-	                _React2.default.createElement(
-	                    'div',
-	                    { className: 'items4' },
-	                    _React2.default.createElement(
-	                        'a',
-	                        { href: '#' },
-	                        _React2.default.createElement('img', { className: 'youtube', src: 'logo/youtube.png', alt: '' })
-	                    )
-	                ),
-	                _React2.default.createElement(
-	                    'div',
-	                    { className: 'items5' },
-	                    _React2.default.createElement(
-	                        'a',
-	                        { href: '#' },
-	                        _React2.default.createElement('img', { className: 'mail', src: 'logo/logo-mail.png', alt: '' })
+	                        _React2.default.createElement('img', { className: 'instagram', src: './assets/insta.png' })
 	                    )
 	                ),
 	                _React2.default.createElement(
@@ -26502,7 +26484,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n* {\n  padding: 0;\n  margin: 0; }\n\n/* ou faire un Reset.css*/\n.navContent {\n  border: 2px solid red;\n  overflow: hidden;\n  width: 300px; }\n\nul {\n  border: 2px solid black;\n  display: flex;\n  list-style: none;\n  /*margin-left:-200px;*/\n  transition: all 1s ease-in-out;\n  /*pour permettre au js de glisser*/ }\n\n/*un element animé doit toujours avoir une transition sinon ça ne fonctionne pas*/\nul li img {\n  width: 400px;\n  height: 300px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n* {\n  padding: 0;\n  margin: 0; }\n\n/* ou faire un Reset.css*/\n.navContent {\n  border: 2px solid red;\n  overflow: hidden;\n  width: 100%; }\n\nul {\n  border: 2px solid black;\n  display: flex;\n  list-style: none;\n  /*margin-left:-200px;*/\n  transition: all 1s ease-in-out;\n  /*pour permettre au js de glisser*/ }\n\n/*un element animé doit toujours avoir une transition sinon ça ne fonctionne pas*/\nul li img {\n  width: 100%;\n  height: 300px; }\n", ""]);
 	
 	// exports
 

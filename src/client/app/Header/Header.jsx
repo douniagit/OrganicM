@@ -1,6 +1,8 @@
 import React from 'React';
 import "./header.css";
 
+
+
 class Header extends React.Component{
 	render(){
 
@@ -27,6 +29,7 @@ class Header extends React.Component{
 							<li>Nos partenaires</li>
 						</ul>
 					</div>
+					
 				</div>
 			);
 		}
