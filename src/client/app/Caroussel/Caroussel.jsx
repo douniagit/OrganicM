@@ -1,4 +1,5 @@
 import React from 'React';
+import "./Caroussel.css";
 
 const slides=[
 	{
@@ -21,20 +22,24 @@ const slides=[
 ]
 
 class Caroussel extends React.Component{
-
-	state = {
+	
+	constructor(props){
+		super(props);
+		this.state = {
 		position:0
 	};
+}
 
-	nextSlide=()=>{
-		if(this.state.position>=3){
+
+	nextSlide(){
+		if(this.state.position >= 3){
 		this.setState({position:0})
 	}
 	else{
 		this.setState({position:++this.state.position})
 	}
 }
-	prevSlide=()=>{
+	prevSlide(){
 		if(this.state.position<1){
 			this.setState({position:0})
 		}
@@ -46,13 +51,13 @@ class Caroussel extends React.Component{
   render() {
 
 // la position est traduite par une margin left de: 0*-400, 1*-400 2*-400 etc
-  	let newMargin=this.state.position * -400;
+  	let newMargin = this.state.position * -400;
     return (
       <div className="App">
-     	<div className="container">
+     	<div className="navContent">
      		<ul style={{marginLeft:newMargin}}>
      			
-	     		{slides.map(slide=>
+	     		{slides.map(slide =>
 	     			<li>
 	     		<img src={slide.url} />
 	     		<p> {slide.title} </p>

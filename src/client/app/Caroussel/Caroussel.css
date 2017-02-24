@@ -1,0 +1,24 @@
+*{
+	padding:0;
+	margin:0;
+}/* ou faire un Reset.css*/
+
+.navContent{
+	border:2px solid red;
+	overflow:hidden;
+	width:300px;
+}
+
+ul{
+	border:2px solid black;
+	display:flex;
+	list-style:none;
+	/*margin-left:-200px;*/
+	transition:all 1s ease-in-out;/*pour permettre au js de glisser*/
+}
+/*un element animé doit toujours avoir une transition sinon ça ne fonctionne pas*/
+
+ul li img{
+	width:400px;
+	height:300px;
+}
