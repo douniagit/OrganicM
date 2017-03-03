@@ -51,9 +51,9 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _React = __webpack_require__(/*! React */ 179);
+	var _react = __webpack_require__(/*! react */ 1);
 	
-	var _React2 = _interopRequireDefault(_React);
+	var _react2 = _interopRequireDefault(_react);
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
@@ -89,23 +89,34 @@
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
-	      return _React2.default.createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _React2.default.createElement(_Header2.default, null),
-	        _React2.default.createElement(_Caroussel2.default, null),
-	        _React2.default.createElement(_Footer2.default, null)
+	        _react2.default.createElement(_Header2.default, null),
+	        _react2.default.createElement(_Caroussel2.default, null),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
 	
 	  return App;
-	}(_React2.default.Component);
+	}(_react2.default.Component);
 	
-	(0, _reactDom.render)(_React2.default.createElement(App, null), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ },
-/* 1 */,
+/* 1 */
+/*!**************************!*\
+  !*** ./~/react/react.js ***!
+  \**************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	module.exports = __webpack_require__(/*! ./lib/React */ 2);
+
+
+/***/ },
 /* 2 */
 /*!******************************!*\
   !*** ./~/react/lib/React.js ***!
@@ -25864,7 +25875,7 @@
 	
 	
 	// module
-	exports.push([module.id, "* {\n  margin: 0; }\n\n.header {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 100%;\n  height: 20vh;\n  background-color: #fce5cdff;\n  border: 2px solid black; }\n\n.logo img {\n  width: 162px;\n  height: 162px;\n  border: 2px solid black; }\n\n.navpart1 ul {\n  width: 100%;\n  list-style: none;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 2px solid black; }\n\n.navpart2 ul {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  list-style: none;\n  border: 2px solid black; }\n\n.navpart1 ul a {\n  display: inline-block;\n  text-decoration: none; }\n\n.navpart1 ul li {\n  position: relative;\n  margin: 20px; }\n\n.navpart2 ul li {\n  position: relative;\n  margin: 20px; }\n\n.navpart1 ul li:hover {\n  background: #FFFFFF; }\n\n.navpart1 ul ul {\n  display: none;\n  position: absolute;\n  padding: 10px 10px 10px 0;\n  width: 150px; }\n\n.navpart1 ul ul li {\n  margin-left: 10px; }\n\n.navpart1 ul li:hover > ul {\n  display: block; }\n", ""]);
+	exports.push([module.id, "* {\n  margin: 0; }\n\n.header {\n  position: absolute;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 100%;\n  height: 12vh;\n  background-color: #fce5cdff;\n  border: 2px solid black; }\n\n.logo img {\n  width: 162px;\n  height: 162px;\n  border: 2px solid black; }\n\n.navpart1 ul {\n  width: 100%;\n  list-style: none;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  border: 2px solid black; }\n\n.navpart2 ul {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  list-style: none;\n  border: 2px solid black; }\n\n.navpart1 ul a {\n  display: inline-block;\n  text-decoration: none; }\n\n.navpart1 ul li {\n  position: relative;\n  margin: 20px; }\n\n.navpart2 ul li {\n  position: relative;\n  margin: 20px; }\n\n.navpart1 ul li:hover {\n  background: #FFFFFF; }\n\n.navpart1 ul ul {\n  display: none;\n  position: absolute;\n  padding: 10px 10px 10px 0;\n  width: 150px; }\n\n.navpart1 ul ul li {\n  margin-left: 10px; }\n\n.navpart1 ul li:hover > ul {\n  display: block; }\n", ""]);
 	
 	// exports
 
@@ -26400,9 +26411,10 @@
 	
 				// la position est traduite par une margin left de: 0*-400, 1*-400 2*-400 etc
 				var newMargin = this.state.position * -400;
+	
 				return _React2.default.createElement(
 					"div",
-					{ className: "App" },
+					{ className: "Caroussel" },
 					_React2.default.createElement(
 						"div",
 						{ className: "navContent" },
@@ -26412,8 +26424,8 @@
 							slides.map(function (slide) {
 								return _React2.default.createElement(
 									"li",
-									null,
-									_React2.default.createElement("img", { src: slide.url }),
+									{ className: "size" },
+									_React2.default.createElement("img", { className: "slid", src: slide.url }),
 									_React2.default.createElement(
 										"p",
 										null,
@@ -26485,7 +26497,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n* {\n  padding: 0;\n  margin: 0; }\n\n/* ou faire un Reset.css*/\n.navContent {\n  border: 2px solid red;\n  overflow: hidden;\n  width: 100%; }\n\nul {\n  border: 2px solid black;\n  display: flex;\n  list-style: none;\n  /*margin-left:-200px;*/\n  transition: all 1s ease-in-out;\n  /*pour permettre au js de glisser*/ }\n\n/*un element animé doit toujours avoir une transition sinon ça ne fonctionne pas*/\nul li img {\n  width: 100%;\n  height: 300px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n* {\n  padding: 0;\n  margin: 0; }\n\n.navContent {\n  overflow: hidden;\n  width: 100%;\n  height: 100vh; }\n\nul {\n  border: 2px solid black;\n  display: flex;\n  list-style: none;\n  /*margin-left:-200px;*/\n  transition: all 1s ease-in-out;\n  /*pour permettre au js de glisser*/ }\n\n/*un element animé doit toujours avoir une transition sinon ça ne fonctionne pas*/\nul li img {\n  width: 400%;\n  height: 110vh;\n  max-width: 100%; }\n", ""]);
 	
 	// exports
 

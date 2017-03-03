@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import {render} from 'react-dom';
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
@@ -11,7 +11,6 @@ class App extends React.Component {
     	<Header />
     	<Caroussel />
       	<Footer />
-
       </div>
     );
   }
