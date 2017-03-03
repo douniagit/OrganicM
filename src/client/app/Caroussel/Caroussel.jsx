@@ -30,7 +30,6 @@ class Caroussel extends React.Component{
 	};
 }
 
-
 	nextSlide(){
 		if(this.state.position >= 3){
 		this.setState({position:0})
@@ -52,21 +51,32 @@ class Caroussel extends React.Component{
 
 // la position est traduite par une margin left de: 0*-400, 1*-400 2*-400 etc
   	let newMargin = this.state.position * -400;
+    
+
     return (
-      <div className="App">
+
+      <div className="Caroussel">
      	<div className="navContent">
+
      		<ul style={{marginLeft:newMargin}}>
      			
 	     		{slides.map(slide =>
-	     			<li>
-	     		<img src={slide.url} />
-	     		<p> {slide.title} </p>
+	     			
+	     		<li className="size">
+	     			<img className="slid" src={slide.url} />
+	     				<p> {slide.title} </p>
+	     		
 	     		</li>
 	     		)}
      		</ul>
+     	
      	</div>
+
      	<button onClick={this.prevSlide}>Prev</button>
      	<button onClick={this.nextSlide}>Next</button>
+      
+
+
       </div>
     );
   }
